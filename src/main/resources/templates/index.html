@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Inicio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Inicio</h1>
+    <a th:href="@{agregar}">Agregar alumno</a>
+    <!-- Preguntamos si la lista no es nula ni vacía -->
+    <div th:if="${alumnos != null and !alumnos.empty}">
+        <!-- Si no es nula ni vacía, se mostrará la tabla -->
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Celular</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
+            </tr>
+
+            <tr th:each="alumno : ${alumnos}">
+                <td th:text="${alumno.nombre}" />
+                <td th:text="${alumno.apellido}" />
+                <td th:text="${alumno.email}" />
+                <td th:text="${alumno.celular}" />
+                <td> <a th:href="@{/editar/} + ${alumno.id_alumno}" th:text="Editar" /> </td>
+                <td> <a th:href="@{/eliminar/} + ${alumno.id_alumno}" th:text="Eliminar" /> </td>
+            </tr>
+        </table>
+    </div>
+    <div th:if="${alumnos == null or alumnos.empty}">
+        <p>La lista de alumnos está vacía</p>
+    </div>
+</body>
+
+</html>
