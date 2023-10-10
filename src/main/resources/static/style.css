@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+body > * {
+    margin: .625rem 0;
+    padding: .3125rem;
+}
+
+.boton {
+    border-radius: 9px;
+    color: #fff;
+    text-decoration: none;
+    width: fit-content;
+    padding: .5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-agregar {
+    background-color: #28a745;
+}
+
+.btn-editar {
+    background-color: #007bff;
+    padding: .3125rem .5rem;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    padding: .3125rem .5rem;
+}
+
+/* Establecer un estilo general para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacio entre tablas (opcional) */
+  }
+  
+  /* Establecer un estilo para las celdas del encabezado */
+  th {
+    background-color: #333;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  /* Establecer un estilo para las celdas de datos */
+  td {
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Establecer un estilo para las filas impares (opcional) */
+  tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Establecer un estilo para las filas al pasar el cursor sobre ellas (opcional) */
+  tr:hover {
+    background-color: #ddd;
+  }
+  

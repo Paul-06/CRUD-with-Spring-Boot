@@ -5,26 +5,35 @@
         <title>Datos del alumno</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/modificar.css">
     </head>
     <body>
         <h1>Datos del alumno</h1>
-        <a th:href="@{/}">Regresar</a>
+        <a class="boton btn-regresar" th:href="@{/}">Regresar</a>
         <br/>
         <form th:action="@{/guardar}" method="post" th:object="${alumno}">
             <input type="hidden" name="id_alumno" th:field="*{id_alumno}"/>
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre" th:field="*{nombre}"/>
+            <div class="field">
+                <label for="nombre">Nombre:</label>
+                <input class="entrada" type="text" name="nombre" th:field="*{nombre}"/>
+            </div>
             <br/>
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" th:field="*{apellido}"/>
+            <div class="field">
+                <label for="apellido">Apellido:</label>
+                <input class="entrada" type="text" name="apellido" th:field="*{apellido}"/>    
+            </div>
             <br/>
-            <label for="email">Email:</label>
-            <input type="text" name="email" th:field="*{email}"/>
+            <div class="field">
+                <label for="email">Email:</label>
+                <input class="entrada" type="text" name="email" th:field="*{email}"/>    
+            </div>
             <br/>
-            <label for="celular">Celular:</label>
-            <input type="text" name="celular" maxlength="9" th:field="*{celular}"/>
+            <div class="field">
+                <label for="celular">Celular:</label>
+                <input class="entrada" type="text" name="celular" maxlength="9" th:field="*{celular}"/>    
+            </div>
             <br/>
-            <input type="submit" name="Guardar" value="Guardar"/>
+            <input class="boton btn-guardar" type="submit" name="Guardar" value="Guardar"/>
         </form>
     </body>
 </html>
