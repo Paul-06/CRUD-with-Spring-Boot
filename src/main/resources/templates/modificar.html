@@ -25,12 +25,12 @@
             <br/>
             <div class="field">
                 <label for="email">Email:</label>
-                <input class="entrada" type="text" name="email" th:field="*{email}"/>    
+                <input class="entrada" type="email" name="email" th:field="*{email}"/>    
             </div>
             <br/>
             <div class="field">
                 <label for="celular">Celular:</label>
-                <input class="entrada" type="text" name="celular" maxlength="9" th:field="*{celular}"/>    
+                <input class="entrada" type="tel" name="celular" maxlength="9" th:field="*{celular}"/>    
             </div>
             <br/>
             <input class="boton btn-guardar" type="submit" name="Guardar" value="Guardar"/>
